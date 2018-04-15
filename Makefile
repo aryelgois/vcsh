@@ -33,6 +33,7 @@ ZSH_COMPLETIONS_DIR=$(ZSHDIR_PREFIX)/site-functions
 # Install all paths *NOT* requiring conditional and hence non-POSIX logic.
 install-common:
 # Install the "vcsh" command.
+	install -d $(DESTDIR)$(BINDIR)
 	install -m 0755 $(self) $(DESTDIR)$(BINDIR)/
 
 # Install documentation.

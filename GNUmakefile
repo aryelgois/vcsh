@@ -62,10 +62,12 @@ endif
 install: all install-common
 # If the man page has been generated, install it during installation.
 ifneq ($(wildcard $(manpages)),)
+	install -d $(DESTDIR)$(MANDIR)/man1
 	install -m 0644 $(manpages) $(DESTDIR)$(MANDIR)/man1/
 endif
 
 # If zsh's completions directory exists, install ours there during installation.
 ifneq ($(ZSH_COMPLETIONS_DIR),)
+	install -d $(DESTDIR)$(ZSH_COMPLETIONS_DIR)
 	install -m 0644 $(zshcompletions) $(DESTDIR)$(ZSH_COMPLETIONS_DIR)/
 endif
