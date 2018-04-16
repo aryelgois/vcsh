@@ -548,7 +548,7 @@ case $VCSH_COMMAND in
 	versio|versi|vers|ver|ve) VCSH_COMMAND=version;;
 	which|whi|wh) VCSH_COMMAND=which;;
 	write|writ|wri|wr) VCSH_COMMAND=write-gitignore;;
-esac    
+esac
 
 if [ x"$VCSH_COMMAND" = x'clone' ]; then
 	VCSH_BRANCH=
